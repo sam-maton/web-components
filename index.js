@@ -2,8 +2,8 @@ import { Button } from './components/Button/Button.js';
 
 customElements.define('web-button', Button);
 
-// const first = document.getElementById('first-button');
+const clickExample = document.getElementById('click-example');
 
-// first.addEventListener('click', () => {
-//   console.log('clicked!');
-// });
+clickExample.onClick = () => {
+  alert('clicked');
+};
