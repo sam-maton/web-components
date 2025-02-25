@@ -1,0 +1,19 @@
+.ds-button {
+  background-color: var(--bg-color, #007bff);
+  color: var(--text-color, white);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+.ds-button:hover {
+  background-color: color-mix(in srgb, var(--bg-color, #007bff), black 10%);
+}
+
+.ds-button:active {
+  background-color: color-mix(in srgb, var(--bg-color, #007bff), black 20%);
+}

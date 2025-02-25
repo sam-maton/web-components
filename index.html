@@ -8,11 +8,22 @@
     <link rel="stylesheet" href="default.css" />
   </head>
   <body>
-    <web-button id="first-button">
-      <ion-icon slot="left-icon" name="heart"></ion-icon>
-      Click Me!
-      <ion-icon slot="right-icon" name="heart"></ion-icon>
-    </web-button>
+    <main>
+      <h1>Custom Web Components</h1>
+      <div class="docs-example">
+        <h2>Default</h2>
+        <web-button id="first-button"> Click Me! </web-button>
+      </div>
+      <div class="docs-example">
+        <h2>Default</h2>
+        <web-button id="first-button">
+          <ion-icon slot="left-icon" name="heart"></ion-icon>
+          Click Me!
+          <ion-icon slot="right-icon" name="heart"></ion-icon>
+        </web-button>
+      </div>
+    </main>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

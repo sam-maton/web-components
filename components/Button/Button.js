@@ -3,13 +3,12 @@ export class Button extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' });
+    this.tabIndex = 0;
   }
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <style>
-        ${buttonStyles}
-      </style>
+      <link rel='stylesheet' href='./components/Button/button.css'>
       <span class='ds-button'>
         <slot class='ds-button__icon' name='left-icon'></slot>
         <slot></slot>
@@ -18,24 +17,3 @@ export class Button extends HTMLElement {
     `;
   }
 }
-
-const buttonStyles = `
-  .ds-button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .ds-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .ds-button__icon{
-    margin: 0;
-  }
-`;
