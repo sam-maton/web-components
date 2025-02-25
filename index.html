@@ -12,14 +12,28 @@
       <h1>Custom Web Components</h1>
       <div class="docs-example">
         <h2>Default</h2>
-        <web-button id="first-button"> Click Me! </web-button>
+        <web-button>Click Me!</web-button>
       </div>
       <div class="docs-example">
-        <h2>Default</h2>
-        <web-button id="first-button">
+        <h2>With Icons</h2>
+        <web-button>
           <ion-icon slot="left-icon" name="heart"></ion-icon>
           Click Me!
           <ion-icon slot="right-icon" name="heart"></ion-icon>
+        </web-button>
+      </div>
+      <div class="docs-example">
+        <h2>With Custom Themes</h2>
+        <web-button style="--bg-color: #d72929">
+          Click Me!
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </web-button>
+      </div>
+      <div class="docs-example">
+        <h2>Disabled</h2>
+        <web-button disabled="true">
+          Click Me!
+          <ion-icon name="arrow-forward-outline"></ion-icon>
         </web-button>
       </div>
     </main>

@@ -1,5 +1,6 @@
 .ds-button {
-  background-color: var(--bg-color, #007bff);
+  --default-bg-color: #007bff;
+  background-color: var(--bg-color, var(--default-bg-color));
   color: var(--text-color, white);
   padding: 8px 16px;
   border-radius: 4px;
@@ -9,11 +10,26 @@
   align-items: center;
   gap: 8px;
   width: fit-content;
+  user-select: none;
 }
-.ds-button:hover {
-  background-color: color-mix(in srgb, var(--bg-color, #007bff), black 10%);
+.ds-button:hover:not(.ds-button--disabled) {
+  background-color: color-mix(
+    in srgb,
+    var(--bg-color, var(--default-bg-color)),
+    black 10%
+  );
 }
 
-.ds-button:active {
-  background-color: color-mix(in srgb, var(--bg-color, #007bff), black 20%);
+.ds-button:active:not(.ds-button--disabled) {
+  background-color: color-mix(
+    in srgb,
+    var(--bg-color, var(--default-bg-color)),
+    black 20%
+  );
+}
+
+.ds-button--disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
 }
