@@ -3,6 +3,7 @@ export class Button extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' });
+    this.disabled = this.getAttribute('disabled');
     this.tabIndex = this.disabled ? -1 : 0;
   }
 
